@@ -10,3 +10,9 @@
     - role: openstack-security-group
     - role: openstack-instance
 #    - role: openstack-volume-snapshot
+
+- hosts: HOSTS
+  gather_facts: true
+
+  roles:
+    - role: twitter-harvester

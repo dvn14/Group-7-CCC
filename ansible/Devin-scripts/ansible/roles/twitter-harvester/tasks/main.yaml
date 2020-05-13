@@ -1,0 +1,27 @@
+- name: Install pip
+  become: yes
+  apt:
+    name: ['python3-pip']
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == "Ubuntu"
+
+- name: Update pip
+  become: yes
+  pip:
+    name: ['pip']
+    state: latest
+
+- name: Clone harvester git repo
+  git:
+    repo: https://github.com/dvn14/CCC2020-Group7.git
+    dest: /home/ubuntu/CCC2020-Group7
+    accept_hostkey: yes
+
+- name: Install harvester packages
+  become: yes
+  pip:
+    requirements: /home/ubuntu/CCC2020-Group7/twitter-harvester/packages.txt
+
+- name: start harvester
+  shell: nohup python3 ~/CCC2020-Group7/twitter-harvester/twitter-stream.py &

@@ -5,9 +5,8 @@ echo "ansible_check: done"
 echo "Deployment: start"
 
 # Spin up main server
-echo -e "\n[HARVESTERS]" >> /hosts
 
-. ./openrc.sh; ansible-playbook -i hosts --ask-become-pass mrc.yaml  | grep -Po '(\d{1,3}\.){3}\d{1,3}' >> ./ansible/hosts
+. ./openrc.sh; ansible-playbook -i hosts --ask-become-pass mrc.yaml
 
 echo "Spin up complete"
 #echo -e "\n[main_server]" >> ./hosts

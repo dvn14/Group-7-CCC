@@ -17,11 +17,10 @@
 # create security group rules
 - name: Create security group rules
   os_security_group_rule:
-    security_group: '{{ item.name }}'
-    protocol: '{{ item.protocol }}'
-    port_range_min: '{{ item.port_range_min }}'
-    port_range_max: '{{ item.port_range_max }}'
-    remote_ip_prefix: '{{ item.remote_ip_prefix }}'
+    security_group: '{{ item.0.name }}'
+    protocol: '{{ item.1.protocol }}'
+    port_range_min: '{{ item.1.port_range_min }}'
+    port_range_max: '{{ item.1.port_range_max }}'
+    remote_ip_prefix: '{{ item.1.remote_ip_prefix }}'
     state: present
-  loop: '{{ security_groups }}'
-  
+  loop: '{{ security_groups |  subelements("rules", "skip_missing=True") }}'
