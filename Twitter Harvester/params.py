@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon May  4 14:26:24 2020
+
+@author: devin
+"""
+
+CONSUMER_KEY = "Ok4i5Q2xbei7zbalAT8CNtIyP"
+CONSUMER_SECRET = "8run02ATBTC5U5uNYfmGDHjLtn4h4WGEPIu3BAqjjt0k8ocBQX"
+ACCESS_TOKEN = "1251884711271477248-U2x2FW6YOwBXUkGnAZJYcK5KeF0sxh"
+ACCESS_TOKEN_SECRET = "dHfdzos7zWVtTfRjrXDawvJM9xNUitRMTMt40tm6s1M0n"
+
+OUTPUT_LOG = "output.log"
+STREAM_OUTPUT = "stream-v8.json"
+STREAM_START = 0
+
+AUS_GEO_RANGE = [112,-44,155,-10]
