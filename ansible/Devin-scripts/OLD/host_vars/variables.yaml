@@ -59,6 +59,6 @@ instances:
     volumes: ['script-vol-1']
 
 instance_image: 215f9775-483c-4e0a-b703-d21a5c966f2e
-instance_key_name: id_rsa
+instance_key_name: devin-key
 instance_flavor: uom.mse.2c9g
 instance_network: qh2-uom
