@@ -15,7 +15,4 @@ EXERCISE_KEYS = ["exercis","physical","fitness","wellness","athlet","jog","runni
                  "workout","gym","weights","cardio","yoga","stretch","walk","health",
                  "skill","football","rugby","swim"]
 
-READFILE = ["tweets/stream-vX.json"]
-NSW_FILE = "nsw-summary.json"
-AUS_FILE = "aus-summary.json"
-AURIN_NSW = "aurin/nsw_data.json"
+SEARCH_KEYS = ["food", "film", "exercise"]
