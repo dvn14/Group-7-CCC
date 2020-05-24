@@ -3,6 +3,7 @@
 Created on Thu Apr 23 18:33:42 2020
 
 @author: devin
+CCC2020 - Group 7
 """
 
 from __future__ import absolute_import, print_function

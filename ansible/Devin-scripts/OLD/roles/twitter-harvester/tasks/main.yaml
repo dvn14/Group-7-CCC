@@ -23,5 +23,8 @@
   pip:
     requirements: /home/ubuntu/CCC2020-Group7/twitter-harvester/packages.txt
 
-- name: start harvester
+- name: start stream harvester
   shell: nohup python3 ~/CCC2020-Group7/twitter-harvester/twitter-stream.py &
+
+- name: start search harvester
+  shell: nohup python3 ~/CCC2020-Group7/twitter-harvester/twitter-search.py &

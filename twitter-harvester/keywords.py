@@ -3,6 +3,7 @@
 Created on Wed May  6 22:44:45 2020
 
 @author: devin
+CCC2020 - Group 7
 """
 
 FOOD_KEYS = ["food","delicious","bread","cook","chef","baking",
