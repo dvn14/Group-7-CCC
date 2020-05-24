@@ -1,0 +1,26 @@
+[
+  {
+    "id": "exercise",
+    "text": "Exercise",
+    "icon": "running",
+    "desc": "Exercise",
+    "variant": "warning",
+    "className": "activity-btn"
+  },
+  {
+    "id": "food",
+    "text": "Food",
+    "icon": "hamburger",
+    "desc": "Food",
+    "variant": "warning",
+    "className": "activity-btn"
+  },
+  {
+    "id": "film",
+    "text": "Film",
+    "icon": "film",
+    "desc": "Film",
+    "variant": "warning",
+    "className": "activity-btn"
+  }
+]

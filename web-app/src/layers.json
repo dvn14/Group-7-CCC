@@ -1,0 +1,88 @@
+[
+  {
+    "id": 0,
+    "text": "Occupation",
+    "icon": "people-carry",
+    "desc": "Occupation",
+    "variant": "secondary",
+    "className": "layer-btn",
+    "contents": [
+      {
+        "id": "occ_clerical_and_admin",
+        "text": "Clerical and Admin"
+      },
+      {
+        "id": "occ_professionals",
+        "text": "Professionals"
+      },
+      {
+        "id": "occ_labours",
+        "text": "Labours"
+      },
+      {
+        "id": "occ_operator_and_drivers",
+        "text": "Operator and Drivers"
+      },
+      {
+        "id": "occ_managers",
+        "text": "Managers"
+      },
+      {
+        "id": "occ_service_workers",
+        "text": "Service Workers"
+      },
+      {
+        "id": "occ_notstated",
+        "text": "Not Stated"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "Education",
+    "icon": "graduation-cap",
+    "desc": "Education ratio",
+    "variant": "secondary",
+    "className": "layer-btn",
+    "contents": [
+      {
+        "id": "edu_primary",
+        "text": "Primary Education"
+      },
+      {
+        "id": "edu_secondary",
+        "text": "Secondary Education"
+      },
+      {
+        "id": "edu_technical education",
+        "text": "Technical Education"
+      },
+      {
+        "id": "edu_university_and_tertiary",
+        "text": "University and Tertiary Education"
+      },
+      {
+        "id": "edu_other_fulltime",
+        "text": "Other Fulltime Education"
+      },
+      {
+        "id": "edu_other",
+        "text": "Other Education"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Income",
+    "icon": "chart-pie",
+    "desc": "Income",
+    "variant": "secondary",
+    "className": "layer-btn",
+    "contents": [
+      {
+        "id": "mean_income",
+        "text": "Mean Income ($)"
+      }
+    ]
+  }
+]
