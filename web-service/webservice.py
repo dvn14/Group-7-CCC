@@ -15,8 +15,13 @@ config = None
 with open(CONFIG_FILE) as config_file:
     config = json.load(config_file)
 
+@app.route("/areas")
+def areas():
+    resultText = json.dumps(AVAILABLE_AREAS)
+    return Response(resultText, mimetype="application/json")
+    
 @app.route("/summaries/<area>")
-def summary(area):
+def summaries(area):
     resultText = ""
 
     if area not in AVAILABLE_AREAS:
@@ -50,4 +55,4 @@ def indices(area):
     return Response(resultText, mimetype="application/json")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

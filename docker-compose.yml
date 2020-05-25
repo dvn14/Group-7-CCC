@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+    web-service:
+        build: web-service
+    web-app:
+        build: web-app
+        stdin_open: true
+    web-service-lb:
+        container_name: web-service-lb
+        build: web-service-lb
+        ports:
+            - 8080:8080
+        depends_on:
+            - web-service
+    web-app-lb:
+        container_name: web-app-lb
+        build: web-app-lb
+        ports:
+            - 80:80
+        depends_on:
+            - web-app
