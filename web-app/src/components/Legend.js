@@ -1,3 +1,19 @@
+/* COMP90024 Cluster and Cloud Computing
+   Assignment 2, Semester 1 2020
+   City Analytics on the Cloud
+   Team 7
+   Kurniawan Lastanto - 1114056 - Melbourne
+   Mochammad Chaerudin - 1041681 - Melbourne
+   Devin Nanayakkara - 1132751 - Melbourne
+   Abhishek Anand - 1005884 - Melbourne
+   Shaik Anisuzzaman - 1060370 - Melbourne
+ 
+   File:    Legend.js
+   Purpose: A map legend component.
+            This custom legend component implementation was based on
+            https://codesandbox.io/s/6yqs5?file=/src/Legend.js.
+*/
+
 import { MapControl, withLeaflet } from "react-leaflet";
 import L from "leaflet";
 import PropTypes from "prop-types";
