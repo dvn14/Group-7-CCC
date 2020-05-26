@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+    db-lb:
+        container_name: db-lb
+        build: db-lb
+        ports:
+            - 6000:6000
