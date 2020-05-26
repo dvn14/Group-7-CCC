@@ -1,0 +1,67 @@
+# Create an instance on MRC
+- name: Create an instance
+  os_server:
+    name: '{{ item.name }}'
+    image: '{{ instance_image }}'
+    key_name: '{{ instance_key_name }}'
+    flavor: '{{ instance_flavor}}'
+    availability_zone: '{{ availability_zone }}'
+    network: '{{ instance_network }}'
+    security_groups: '{{ sg_names }}'
+    volumes: '{{ item.volumes }}'
+    auto_floating_ip: yes
+    wait: yes
+    timeout: 600
+    state: present
+  loop: '{{ instances }}'
+  register: os_instance
+
+- name: Create an instance
+  os_server:
+    name: '{{ item.name }}'
+    image: '{{ instance_image }}'
+    key_name: '{{ instance_key_name }}'
+    flavor: '{{ instance_flavor}}'
+    availability_zone: '{{ availability_zone }}'
+    network: '{{ instance_network }}'
+    security_groups: '{{ sg_names }}'
+    volumes: '{{ item.volumes }}'
+    auto_floating_ip: yes
+    wait: yes
+    timeout: 600
+    state: present
+  loop: '{{ instances_web }}'
+  register: os_instance_web
+
+- debug:
+    msg: "Instance {{ item.openstack.name }} has been created. IP address is {{ item.openstack.public_v4 }}"
+  with_items:
+    - '{{ os_instance.results }}'
+    - '{{ os_instance_web.results }}'
+  when: item.openstack is defined
+
+- name: Wait for connecetion
+  wait_for:
+    host: "{{ item.openstack.public_v4 }}"
+    port: 22
+    timeout: 120
+    search_regex: OpenSSH
+  with_items:
+    - '{{ os_instance.results }}'
+    - '{{ os_instance_web.results }}'
+  when: item.openstack is defined
+
+# add hosts to ansible memory inventory
+- name: Add host
+  add_host:
+    name: '{{ item.openstack.public_v4 }}'
+    groups: HOSTS
+  loop: '{{ os_instance.results }}'
+  when: item.openstack is defined
+
+- name: Add web host
+  add_host:
+    name: '{{ item.openstack.public_v4 }}'
+    groups: WEBHOSTS
+  loop: '{{ os_instance_web.results }}'
+  when: item.openstack is defined

@@ -1,0 +1,16 @@
+- name: Insert/Update "proxy setting" in /etc/environment
+  become: yes
+  become_user: root
+  blockinfile:
+    path: /etc/environment
+    block: |
+      HTTP_PROXY: http://wwwproxy.unimelb.edu.au:8000/
+      HTTPS_PROXY: http://wwwproxy.unimelb.edu.au:8000/
+      http_proxy: http://wwwproxy.unimelb.edu.au:8000/
+      https_proxy: http://wwwproxy.unimelb.edu.au:8000/
+      No_proxy: http://wwwproxy.unimelb.edu.au:8000/
+
+- name: Reboot VM that might have lots of updates to apply
+  become: yes
+  reboot:
+    reboot_timeout: 3600
