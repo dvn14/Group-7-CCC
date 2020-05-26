@@ -1,4 +1,21 @@
-# NOTE: We need to open port 80 (HTTP) and 8080 in security group (using ansible script)
+# COMP90024 Cluster and Cloud Computing
+# Assignment 2, Semester 1 2020
+# City Analytics on the Cloud
+# Team 7
+# Kurniawan Lastanto - 1114056 - Melbourne
+# Mochammad Chaerudin - 1041681 - Melbourne
+# Devin Nanayakkara - 1132751 - Melbourne
+# Abhishek Anand - 1005884 - Melbourne
+# Shaik Anisuzzaman - 1060370 - Melbourne
+#
+# File:    command.sh
+# Purpose: to deploy web-service, web-app, web-service-lb (web-service load
+#          balancer), and web-app-lb (web-app load balancer).
+# Note:    This file can be executed manually or called or integrated to the
+#          ansible script.
+#          We need to open port 80 (HTTP) and 8080 in security group (e.g.,
+#          using ansible script).
+
 sudo apt update
 sudo apt install -y subversion
 sudo apt install -y npm
