@@ -1,10 +1,14 @@
-version: '3.7'
+version: '3.3'
 services:
     web-service:
         build: web-service
+        ports:
+            - 5000:5000
     web-app:
         build: web-app
         stdin_open: true
+        ports:
+            - 3000:3000
     web-service-lb:
         container_name: web-service-lb
         build: web-service-lb
