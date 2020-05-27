@@ -18,16 +18,19 @@ services:
         build: web-service
         ports:
             - 5000:5000
+        restart: always
     web-app:
         build: web-app
         stdin_open: true
         ports:
             - 3000:3000
+        restart: always
     web-service-lb:
         container_name: web-service-lb
         build: web-service-lb
         ports:
             - 8080:8080
+        restart: always
         depends_on:
             - web-service
     web-app-lb:
@@ -35,5 +38,6 @@ services:
         build: web-app-lb
         ports:
             - 80:80
+        restart: always
         depends_on:
             - web-app

@@ -18,3 +18,4 @@ services:
         build: db-lb
         ports:
             - 6000:6000
+        restart: always
